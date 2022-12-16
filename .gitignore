@@ -8,3 +8,4 @@
 /dataSources.local.xml
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
+/calculator_pet_project.iml
