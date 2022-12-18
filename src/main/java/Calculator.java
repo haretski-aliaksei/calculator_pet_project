@@ -1,16 +1,16 @@
 public class Calculator implements Runnable {
-    public boolean isInterrupted = true;
+    public boolean isRun = true;
 
     @Override
     public void run() {
 
     }
 
-    public boolean getIsInterruptedStatus() {
-        return isInterrupted;
+    public boolean getIsRunStatus() {
+        return isRun;
     }
 
-    public void setInterruptedToFalse() {
-        this.isInterrupted = false;
+    public void setIsRunToFalse() {
+        this.isRun = false;
     }
 }

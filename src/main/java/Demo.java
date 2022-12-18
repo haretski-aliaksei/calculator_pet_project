@@ -3,17 +3,17 @@ public class Demo {
         Calculator calculatorDemo = new Calculator();
         Thread demoThread = new Thread(calculatorDemo);
 
-        while (calculatorDemo.getIsInterruptedStatus()) {
+        while (calculatorDemo.getIsRunStatus()) {
             System.out.println("Hello world!");
 
             try {
-                demoThread.sleep(1000);
+                demoThread.sleep(700);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
 
             System.out.println("This is my first pet-project named by \"Calculator\"");
-            calculatorDemo.setInterruptedToFalse();
+            calculatorDemo.setIsRunToFalse();
         }
     }
 }
