@@ -9,7 +9,7 @@ public class Demo {
             try {
                 demoThread.sleep(700);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
             }
 
             System.out.println("This is my first pet-project named by \"Calculator\"");
