@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 public class Demo {
     public static void main(String[] args) {
         Calculator calculatorDemo = new Calculator();
-        Thread demoThread = new Thread(calculatorDemo);
         Integer firstOperand = 0;
         Integer secondOperand = 0;
         String arithmeticOperation;
@@ -14,7 +13,7 @@ public class Demo {
             System.out.println("Hello world!");
 
             try {
-                Thread.sleep(700);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());
             }
@@ -33,62 +32,27 @@ public class Demo {
 
         System.out.println();
         System.out.println("So, let's start. \n" +
-                "Please, input first operand in the Integer format (e.g. -256, 0, 128, and so on):");
+                "Please, input first operand in the Integer format (e.g. -256, 0, 128, and so on).\n" +
+                "MIN value: -2,147,483,648\n" +
+                "MAX value: 2,147,483,647\n" +
+                "Input value:");
 
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            boolean switcher = true;
+        firstOperand = getInteger(firstOperand);
 
-            while (switcher) {
-                try {
-                    firstOperand = Integer.parseInt(br.readLine());
+        System.out.println("Please, input second operand in the Integer format (e.g. -256, 0, 128, and so on):\n" +
+                "MIN value: -2,147,483,648\n" +
+                "MAX value: 2,147,483,647\n" +
+                "Input value:");
 
-                    if (firstOperand instanceof Integer) {
-                        switcher = false;
-                    }
+        secondOperand = getInteger(secondOperand);
 
-                } catch (NumberFormatException e) {
-                    System.out.println();
-                    System.out.println("The entered value is not an integer (e.g., -256, 0, 128, and so on).\n" +
-                            "Enter an Integer value:");
-                }
-            }
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
-
-        System.out.println();
-        System.out.println("Please, input second operand in the Integer format (e.g. -256, 0, 128, and so on):");
-
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            boolean switcher = true;
-
-            while (switcher) {
-                try {
-                    secondOperand = Integer.parseInt(br.readLine());
-
-                    if (secondOperand instanceof Integer) {
-                        switcher = false;
-                    }
-
-                } catch (NumberFormatException e) {
-                    System.out.println();
-                    System.out.println("The entered value is not an integer (e.g., -256, 0, 128, and so on).\n" +
-                            "Enter an Integer value:");
-                }
-            }
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
-
-        System.out.println();
         System.out.println("Please, input the character of the arithmetic operation.\n" +
                 "Possible characters:\n" +
                 "- for addition, type '+';\n" +
                 "- for subtraction, type '-';\n" +
                 "- for multiplication, type '*';\n" +
-                "- for division, type '/'.");
+                "- for division, type '/'.\n" +
+                "Input value:");
 
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -146,5 +110,32 @@ public class Demo {
         } catch (IOException exception) {
             exception.printStackTrace();
         }
+    }
+
+    private static Integer getInteger(Integer operand) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            boolean switcher = true;
+
+            while (switcher) {
+                try {
+                    operand = Integer.parseInt(br.readLine());
+
+                    if (operand instanceof Integer) {
+                        switcher = false;
+                    }
+
+                } catch (NumberFormatException e) {
+                    System.out.println();
+                    System.out.println("The entered value is not an integer (e.g., -256, 0, 128, and so on).\n" +
+                            "Enter an Integer value:");
+                }
+            }
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+
+        System.out.println();
+        return operand;
     }
 }
