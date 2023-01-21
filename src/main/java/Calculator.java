@@ -1,9 +1,11 @@
 public class Calculator implements Runnable {
     public boolean isRun = true;
 
-    public double produceAddingNumbers(int firstNumber, int secondNumber) {
+    public Integer produceAddingNumbers(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
+
+    //public
 
     @Override
     public void run() {
