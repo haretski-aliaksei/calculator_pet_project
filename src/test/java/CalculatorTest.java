@@ -21,7 +21,7 @@ public class CalculatorTest {
     @ParameterizedTest()
     @MethodSource("provideArgumentsForProduceAddingNumbersTest")
     public void produceAddingNumbersTest(int firstParameter, int secondParameter, int expected) {
-        double actual = new Calculator().produceAddingNumbers(firstParameter, secondParameter);
+        double actual = new Calculator().produceAddingOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
     }
 }

@@ -1,11 +1,23 @@
+import java.text.DecimalFormat;
+
 public class Calculator implements Runnable {
     public boolean isRun = true;
 
-    public Integer produceAddingNumbers(int firstNumber, int secondNumber) {
+    public int produceAddingOfNumbers(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
 
-    //public
+    public int produceSubtractionOfNumbers(int firstNumber, int secondNumber) {
+        return firstNumber - secondNumber;
+    }
+
+    public int produceMultiplicationOfNumbers(int firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
+    }
+
+    public double produceDivisionOfNumbers(int firstNumber, int secondNumber) {
+        return (double) firstNumber / (double) secondNumber;
+    }
 
     @Override
     public void run() {

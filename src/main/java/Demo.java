@@ -14,7 +14,7 @@ public class Demo {
             System.out.println("Hello world!");
 
             try {
-                demoThread.sleep(700);
+                Thread.sleep(700);
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());
             }
@@ -102,16 +102,34 @@ public class Demo {
                         System.out.println("\n***Result of arithmetic operation***");
                         System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
                                 firstOperand, arithmeticOperation, secondOperand,
-                                calculatorDemo.produceAddingNumbers(firstOperand, secondOperand));
+                                calculatorDemo.produceAddingOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "-":
+                        System.out.println("\n***Result of arithmetic operation***");
+                        System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
+                                firstOperand, arithmeticOperation, secondOperand,
+                                calculatorDemo.produceSubtractionOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "*":
+                        System.out.println("\n***Result of arithmetic operation***");
+                        System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
+                                firstOperand, arithmeticOperation, secondOperand,
+                                calculatorDemo.produceMultiplicationOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "/":
+                        if (secondOperand == 0) {
+                            System.out.println("Second operand equals \"0\". You can't divide by zero");
+                            switcher = false;
+                            break;
+                        }
+
+                        System.out.println("\n***Result of arithmetic operation***");
+                        System.out.printf("First operand (%d) %s second operand (%d) = %f\n",
+                                firstOperand, arithmeticOperation, secondOperand,
+                                calculatorDemo.produceDivisionOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     default:
