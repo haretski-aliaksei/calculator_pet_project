@@ -3,6 +3,7 @@ public class Demo {
         Calculator calculatorDemo = new Calculator();
         InputIntegerValidator inputIntegerValidator = new InputIntegerValidator();
         InputCharacterValidator inputCharacterValidator = new InputCharacterValidator();
+        NextOperation nextOperation = new NextOperation();
         Integer firstOperand = 0;
         Integer secondOperand = 0;
 
@@ -20,16 +21,21 @@ public class Demo {
         }
 
         System.out.println(ServiceText.INTRO_START.getServiceText());
-        System.out.println(ServiceText.INPUT_FIRST_INTEGER_OPERAND.getServiceText());
 
-        firstOperand = inputIntegerValidator.validateInputInteger(firstOperand);
+        while (nextOperation.requestNextOperation) {
+            System.out.println(ServiceText.INPUT_FIRST_INTEGER_OPERAND.getServiceText());
 
-        System.out.println(ServiceText.INPUT_SECOND_INTEGER_OPERAND.getServiceText());
+            firstOperand = inputIntegerValidator.validateInputInteger(firstOperand);
 
-        secondOperand = inputIntegerValidator.validateInputInteger(secondOperand);
+            System.out.println(ServiceText.INPUT_SECOND_INTEGER_OPERAND.getServiceText());
 
-        System.out.println(ServiceText.INPUT_CHARACTER.getServiceText());
+            secondOperand = inputIntegerValidator.validateInputInteger(secondOperand);
 
-        inputCharacterValidator.validateInputCharacter(calculatorDemo, firstOperand, secondOperand);
+            System.out.println(ServiceText.INPUT_CHARACTER.getServiceText());
+
+            inputCharacterValidator.validateInputCharacter(calculatorDemo, firstOperand, secondOperand);
+            nextOperation.suggestNextOperation();
+        }
+        System.out.printf(ServiceText.THANKS.getServiceText(), ServiceText.SMILE.getServiceText());
     }
 }

@@ -3,12 +3,12 @@ public enum ServiceText {
     INTRO_PET("This is my pet-project named by \"Calculator\"."),
     INTRO_START("\nWith this console program, you can perform based on user input\n" +
             "the following arithmetic operations with two operands:\n" +
-            "- addition;\n" +
-            "- subtraction;\n" +
-            "- multiplication;\n" +
-            "- division.\n" +
-            "\nSo, let's start.\n"),
-    INPUT_FIRST_INTEGER_OPERAND("Please, input FIRST operand in the Integer format (e.g. -256, 0, 128, and so on).\n" +
+            "- addition (+);\n" +
+            "- subtraction (-);\n" +
+            "- multiplication (*);\n" +
+            "- division (/).\n" +
+            "\nSo, let's start."),
+    INPUT_FIRST_INTEGER_OPERAND("\nPlease, input FIRST operand in the Integer format (e.g. -256, 0, 128, and so on).\n" +
             "MIN value: -2,147,483,648\n" +
             "MAX value: 2,147,483,647\n" +
             "Input value:"),
@@ -35,7 +35,11 @@ public enum ServiceText {
     CHARACTER_VALIDATOR_ZERO_DIVISION_FORBIDDEN("Second operand equals \"0\". You can't divide by zero."),
     RESULT_OPERATION_TEXT_DEFAULT("\n***Result of arithmetic operation***"),
     RESULT_OPERATION_TEXT_DECIMAL_INTEGERS("First operand (%d) %s second operand (%d) = %d\n"),
-    RESULT_OPERATION_TEXT_FLOATING_POINTS_NUMBER("First operand (%d) %s second operand (%d) = %f\n");
+    RESULT_OPERATION_TEXT_FLOATING_POINTS_NUMBER("First operand (%d) %s second operand (%d) = %f\n"),
+    SUGGEST_NEXT_OPERATION("\nDo you want to produce next operation?\nType \"Yes\" for continue:"),
+    THANKS("\nThank you for choosing best calculator ever! %s\n"),
+    SMILE("☺");
+
 
     private String serviceText;
 
