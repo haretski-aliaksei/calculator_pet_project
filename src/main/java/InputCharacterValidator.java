@@ -15,48 +15,41 @@ public class InputCharacterValidator {
 
                 switch (arithmeticOperation) {
                     case "+":
-                        System.out.println("\n***Result of arithmetic operation***");
-                        System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
+                        System.out.println(ServiceText.RESULT_OPERATION_TEXT_DEFAULT.getServiceText());
+                        System.out.printf(ServiceText.RESULT_OPERATION_TEXT_DECIMAL_INTEGERS.getServiceText(),
                                 firstOperand, arithmeticOperation, secondOperand,
                                 calculatorDemo.produceAddingOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "-":
-                        System.out.println("\n***Result of arithmetic operation***");
-                        System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
+                        System.out.println(ServiceText.RESULT_OPERATION_TEXT_DEFAULT.getServiceText());
+                        System.out.printf(ServiceText.RESULT_OPERATION_TEXT_DECIMAL_INTEGERS.getServiceText(),
                                 firstOperand, arithmeticOperation, secondOperand,
                                 calculatorDemo.produceSubtractionOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "*":
-                        System.out.println("\n***Result of arithmetic operation***");
-                        System.out.printf("First operand (%d) %s second operand (%d) = %d \n",
+                        System.out.println(ServiceText.RESULT_OPERATION_TEXT_DEFAULT.getServiceText());
+                        System.out.printf(ServiceText.RESULT_OPERATION_TEXT_DECIMAL_INTEGERS.getServiceText(),
                                 firstOperand, arithmeticOperation, secondOperand,
                                 calculatorDemo.produceMultiplicationOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     case "/":
                         if (secondOperand == 0) {
-                            System.out.println("Second operand equals \"0\". You can't divide by zero");
+                            System.out.println(ServiceText.CHARACTER_VALIDATOR_ZERO_DIVISION_FORBIDDEN.getServiceText());
                             switcher = false;
                             break;
                         }
 
-                        System.out.println("\n***Result of arithmetic operation***");
-                        System.out.printf("First operand (%d) %s second operand (%d) = %f\n",
+                        System.out.println(ServiceText.RESULT_OPERATION_TEXT_DEFAULT.getServiceText());
+                        System.out.printf(ServiceText.RESULT_OPERATION_TEXT_FLOATING_POINTS_NUMBER.getServiceText(),
                                 firstOperand, arithmeticOperation, secondOperand,
                                 calculatorDemo.produceDivisionOfNumbers(firstOperand, secondOperand));
                         switcher = false;
                         break;
                     default:
-                        System.out.println();
-                        System.out.println("The entered character isn't an arithmetic operation.\n" +
-                                "Possible characters:\n" +
-                                "- for addition, type '+';\n" +
-                                "- for subtraction, type '-';\n" +
-                                "- for multiplication, type '*';\n" +
-                                "- for division, type '/'.\n" +
-                                "Enter one from the possible character:");
+                        System.out.println(ServiceText.CHARACTER_VALIDATOR_SWITCH_DEFAULT.getServiceText());
                 }
             }
         } catch (IOException exception) {

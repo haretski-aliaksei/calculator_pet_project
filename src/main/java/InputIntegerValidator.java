@@ -18,9 +18,7 @@ public class InputIntegerValidator {
                     }
 
                 } catch (NumberFormatException e) {
-                    System.out.println();
-                    System.out.println("The entered value is not an integer (e.g., -256, 0, 128, and so on).\n" +
-                            "Enter an Integer value:");
+                    System.out.println(ServiceText.INPUT_INTEGER_VALIDATION.getServiceText());
                 }
             }
         } catch (IOException exception) {
