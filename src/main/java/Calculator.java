@@ -1,5 +1,4 @@
 import java.math.BigInteger;
-import java.text.DecimalFormat;
 
 public class Calculator implements Runnable {
     public boolean isRun = true;
@@ -15,8 +14,7 @@ public class Calculator implements Runnable {
     public BigInteger produceMultiplicationOfNumbers(int firstNumber, int secondNumber) {
         BigInteger firstConvertedNumber = new BigInteger(String.valueOf(firstNumber));
         BigInteger secondConvertedNumber = new BigInteger(String.valueOf(secondNumber));
-        BigInteger multiplicationOfNumbers = firstConvertedNumber.multiply(secondConvertedNumber);
-        return multiplicationOfNumbers;
+        return firstConvertedNumber.multiply(secondConvertedNumber);
     }
 
     public double produceDivisionOfNumbers(int firstNumber, int secondNumber) {
