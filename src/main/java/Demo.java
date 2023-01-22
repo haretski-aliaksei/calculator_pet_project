@@ -20,11 +20,11 @@ public class Demo {
         }
 
         System.out.println(ServiceText.INTRO_START.getServiceText());
-        System.out.println(ServiceText.INPUT_FIRST_OPERAND.getServiceText());
+        System.out.println(ServiceText.INPUT_FIRST_INTEGER_OPERAND.getServiceText());
 
         firstOperand = inputIntegerValidator.validateInputInteger(firstOperand);
 
-        System.out.println(ServiceText.INPUT_SECOND_OPERAND.getServiceText());
+        System.out.println(ServiceText.INPUT_SECOND_INTEGER_OPERAND.getServiceText());
 
         secondOperand = inputIntegerValidator.validateInputInteger(secondOperand);
 
