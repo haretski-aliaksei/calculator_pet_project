@@ -3,6 +3,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class InputCharacterValidator {
+    /**
+     * This method validates the data entered by the user through the console.
+     * Valid input values are:
+     * - "+";
+     * - "-";
+     * - "*";
+     * - "/".
+     *
+     * @param calculatorDemo object of "Calculator" class
+     * @param firstOperand   the first operand entered by the user through the console
+     * @param secondOperand  the second operand entered by the user through the console
+     */
     public void validateInputCharacter(Calculator calculatorDemo, Integer firstOperand, Integer secondOperand) {
         String arithmeticOperation;
 

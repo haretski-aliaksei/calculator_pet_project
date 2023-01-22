@@ -3,8 +3,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class InputIntegerValidator {
+    /**
+     * This method validates the data entered by the user through the console.
+     *
+     * @param operand operand entered by the user through the console in the Integer format
+     * @return passed validation operand
+     */
     public Integer validateInputInteger(Integer operand) {
-
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             boolean switcher = true;

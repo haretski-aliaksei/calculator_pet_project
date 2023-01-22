@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 public class NextOperation {
     public boolean requestNextOperation = true;
 
+    /**
+     * This method is used to prompt the user to perform the next operation or terminate the program
+     */
     public void suggestNextOperation() {
         try {
             System.out.println(ServiceText.SUGGEST_NEXT_OPERATION.getServiceText());
