@@ -40,7 +40,6 @@ public enum ServiceText {
     THANKS("\nThank you for choosing best calculator ever! %s\n"),
     SMILE("☺");
 
-
     private String serviceText;
 
     ServiceText(String serviceText) {
