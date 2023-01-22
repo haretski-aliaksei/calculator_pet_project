@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 
 public class InputIntegerValidator {
     public Integer validateInputInteger(Integer operand) {
+
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             boolean switcher = true;
