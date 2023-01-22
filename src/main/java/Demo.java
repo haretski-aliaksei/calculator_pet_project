@@ -19,7 +19,6 @@ public class Demo {
             calculatorDemo.setIsRunToFalse();
         }
 
-        System.out.println(ServiceText.INTRO_OPERATIONS.getServiceText());
         System.out.println(ServiceText.INTRO_START.getServiceText());
         System.out.println(ServiceText.INPUT_FIRST_OPERAND.getServiceText());
 
