@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -7,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CalculatorTest {
-    static Stream<Arguments> provideArgumentsForProduceAddingOfNumbersTest() {
+    static Stream<Arguments> provideArgumentsForProduceAddingOfNumbers() {
         return Stream.of(
                 Arguments.of(1, 99, 100),
                 Arguments.of(0, -7, -7),
@@ -18,8 +19,9 @@ public class CalculatorTest {
         );
     }
 
+    @DisplayName("Producing adding of numbers test")
     @ParameterizedTest()
-    @MethodSource("provideArgumentsForProduceAddingOfNumbersTest")
+    @MethodSource("provideArgumentsForProduceAddingOfNumbers")
     public void produceAddingOfNumbersTest(int firstParameter, int secondParameter, long expected) {
         long actual = new Calculator().produceAddingOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
@@ -36,6 +38,7 @@ public class CalculatorTest {
         );
     }
 
+    @DisplayName("Producing subtraction of numbers test")
     @ParameterizedTest()
     @MethodSource("provideArgumentsProduceSubtractionOfNumbers")
     public void produceSubtractionOfNumbersTest(int firstParameter, int secondParameter, int expected) {
@@ -55,6 +58,7 @@ public class CalculatorTest {
         );
     }
 
+    @DisplayName("Producing multiplication of numbers test")
     @ParameterizedTest()
     @MethodSource("provideArgumentsProduceMultiplicationOfNumbers")
     public void produceMultiplicationOfNumbersTest(int firstParameter, int secondParameter, BigInteger expected) {
@@ -73,6 +77,7 @@ public class CalculatorTest {
         );
     }
 
+    @DisplayName("Producing division of numbers test")
     @ParameterizedTest()
     @MethodSource("provideArgumentsProduceDivisionOfNumbers")
     public void produceDivisionOfNumbersTest(int firstParameter, int secondParameter, double expected) {
