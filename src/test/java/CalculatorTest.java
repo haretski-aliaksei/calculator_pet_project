@@ -6,9 +6,7 @@ import java.math.BigInteger;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class CalculatorTest {
-
     static Stream<Arguments> provideArgumentsForProduceAddingOfNumbersTest() {
         return Stream.of(
                 Arguments.of(1, 99, 100),
@@ -26,7 +24,6 @@ public class CalculatorTest {
         long actual = new Calculator().produceAddingOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
     }
-
     static Stream<Arguments> provideArgumentsProduceSubtractionOfNumbers() {
         return Stream.of(
                 Arguments.of(100, 1, 99),
