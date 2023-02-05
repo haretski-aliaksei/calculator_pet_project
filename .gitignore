@@ -9,3 +9,5 @@
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
 /calculator_pet_project.iml
+# Target
+/target/
