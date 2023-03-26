@@ -1,4 +1,9 @@
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class Demo {
+    private static final Logger logger = LogManager.getLogger(Demo.class);
+
     public static void main(String[] args) {
         Calculator calculatorDemo = new Calculator();
         InputIntegerValidator inputIntegerValidator = new InputIntegerValidator();
@@ -8,34 +13,34 @@ public class Demo {
         Integer secondOperand = 0;
 
         while (calculatorDemo.getIsRunStatus()) {
-            System.out.println(ServiceText.HELLO_WORLD.getServiceText());
+            logger.info(ServiceText.HELLO_WORLD.getServiceText());
 
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
+                logger.debug(e.getMessage());
             }
 
-            System.out.println(ServiceText.INTRO_PET.getServiceText());
+            logger.info(ServiceText.INTRO_PET.getServiceText());
             calculatorDemo.setIsRunToFalse();
         }
 
-        System.out.println(ServiceText.INTRO_START.getServiceText());
+        logger.info(ServiceText.INTRO_START.getServiceText());
 
         while (nextOperation.requestNextOperation) {
-            System.out.println(ServiceText.INPUT_FIRST_INTEGER_OPERAND.getServiceText());
+            logger.info(ServiceText.INPUT_FIRST_INTEGER_OPERAND.getServiceText());
 
             firstOperand = inputIntegerValidator.validateInputInteger(firstOperand);
 
-            System.out.println(ServiceText.INPUT_SECOND_INTEGER_OPERAND.getServiceText());
+            logger.info(ServiceText.INPUT_SECOND_INTEGER_OPERAND.getServiceText());
 
             secondOperand = inputIntegerValidator.validateInputInteger(secondOperand);
 
-            System.out.println(ServiceText.INPUT_CHARACTER.getServiceText());
+            logger.info(ServiceText.INPUT_CHARACTER.getServiceText());
 
             inputCharacterValidator.validateInputCharacter(calculatorDemo, firstOperand, secondOperand);
             nextOperation.suggestNextOperation();
         }
-        System.out.printf(ServiceText.THANKS.getServiceText(), ServiceText.SMILE.getServiceText());
+        logger.info(ServiceText.THANKS.getServiceText() + ServiceText.SMILE.getServiceText());
     }
 }
