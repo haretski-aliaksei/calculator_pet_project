@@ -37,7 +37,7 @@ public enum ServiceText {
     RESULT_OPERATION_TEXT_DECIMAL_INTEGERS("First operand (%d) %s second operand (%d) = %d\n"),
     RESULT_OPERATION_TEXT_FLOATING_POINTS_NUMBER("First operand (%d) %s second operand (%d) = %f\n"),
     SUGGEST_NEXT_OPERATION("\nDo you want to produce next operation?\nType \"Yes\" for continue:"),
-    THANKS("\nThank you for choosing best calculator ever! %s\n"),
+    THANKS("\nThank you for choosing best calculator ever! \n"),
     SMILE("☺");
 
     private String serviceText;

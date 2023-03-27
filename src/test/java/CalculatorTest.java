@@ -1,3 +1,5 @@
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,6 +10,8 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CalculatorTest {
+    private static final Logger logger = LogManager.getLogger(CalculatorTest.class);
+
     static Stream<Arguments> provideArgumentsForProduceAddingOfNumbers() {
         return Stream.of(
                 Arguments.of(1, 99, 100),
@@ -44,6 +48,7 @@ public class CalculatorTest {
     public void produceSubtractionOfNumbersTest(int firstParameter, int secondParameter, int expected) {
         int actual = new Calculator().produceSubtractionOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
+        logger.debug("Passed");
     }
 
     static Stream<Arguments> provideArgumentsProduceMultiplicationOfNumbers() {
