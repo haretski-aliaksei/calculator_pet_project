@@ -25,8 +25,9 @@ public enum ServiceText {
             "- for multiplication, type '*';\n" +
             "- for division, type '/'.\n" +
             "Input a character:"),
-    CHARACTER_VALIDATOR_SWITCH_DEFAULT("\nThe entered character isn't an arithmetic operation.\n" +
-            "Possible characters:\n" +
+
+    CHARACTER_VALIDATOR_ERROR_MESSAGE("The entered character isn't an arithmetic operation."),
+    CHARACTER_VALIDATOR_SWITCH_DEFAULT("\nPossible characters:\n" +
             "- for addition, type '+';\n" +
             "- for subtraction, type '-';\n" +
             "- for multiplication, type '*';\n" +

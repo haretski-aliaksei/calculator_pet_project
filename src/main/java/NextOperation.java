@@ -1,8 +1,13 @@
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class NextOperation {
+    private static final Logger logger = LogManager.getLogger(NextOperation.class);
+
     public boolean requestNextOperation = true;
 
     /**
@@ -19,7 +24,7 @@ public class NextOperation {
                 requestNextOperation = false;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.debug(e.getMessage());
         }
     }
 }

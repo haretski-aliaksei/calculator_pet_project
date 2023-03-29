@@ -1,8 +1,13 @@
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class InputCharacterValidator {
+    private static final Logger logger = LogManager.getLogger(InputCharacterValidator.class);
+
     /**
      * This method validates the data entered by the user through the console.
      * Valid input values are:
@@ -61,11 +66,12 @@ public class InputCharacterValidator {
                         switcher = false;
                         break;
                     default:
+                        logger.info(ServiceText.CHARACTER_VALIDATOR_ERROR_MESSAGE.getServiceText());
                         System.out.println(ServiceText.CHARACTER_VALIDATOR_SWITCH_DEFAULT.getServiceText());
                 }
             }
         } catch (IOException exception) {
-            exception.printStackTrace();
+            logger.debug(exception.getMessage());
         }
     }
 }
