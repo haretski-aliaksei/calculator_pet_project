@@ -1,0 +1,73 @@
+"C:\Program Files\Amazon Corretto\jdk11.0.13_8\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\lib\idea_rt.jar=65528:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\aliakseih\IdeaProjects\calculator_pet_project\target\classes;C:\Users\aliakseih\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\Users\aliakseih\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\aliakseih\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\Users\aliakseih\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\Users\aliakseih\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\Users\aliakseih\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\aliakseih\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\aliakseih\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\aliakseih\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\aliakseih\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\aliakseih\.m2\repository\com\google\guava\guava\19.0\guava-19.0.jar;C:\Users\aliakseih\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\aliakseih\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\aliakseih\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\aliakseih\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\Users\aliakseih\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\Users\aliakseih\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\Users\aliakseih\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\aliakseih\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\aliakseih\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\aliakseih\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\aliakseih\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\aliakseih\.m2\repository\io\qameta\allure\allure-testng\2.21.0\allure-testng-2.21.0.jar;C:\Users\aliakseih\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\aliakseih\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\aliakseih\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\aliakseih\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\aliakseih\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\aliakseih\.m2\repository\io\qameta\allure\allure-test-filter\2.21.0\allure-test-filter-2.21.0.jar;C:\Users\aliakseih\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\aliakseih\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar Demo
+Hello world!
+This is my pet-project named by "Calculator".
+
+With this console program, you can perform based on user input
+the following arithmetic operations with two operands:
+- addition (+);
+- subtraction (-);
+- multiplication (*);
+- division (/).
+
+So, let's start.
+
+Please, input FIRST operand in the Integer format (e.g. -256, 0, 128, and so on).
+MIN value: -2,147,483,648
+MAX value: 2,147,483,647
+Input value:
+
+//Here we entered incorrect value
+asdasd
+2023-03-29 20:38:27 DEBUG InputIntegerValidator:31 - For input string: "asdasd"
+0 [main] DEBUG InputIntegerValidator  - For input string: "asdasd"
+
+The entered value is not an integer (e.g., -256, 0, 128, and so on).
+Enter an Integer value:
+3
+
+Please, input SECOND operand in the Integer format (e.g. -256, 0, 128, and so on):
+MIN value: -2,147,483,648
+MAX value: 2,147,483,647
+Input value:
+
+//Here we entered incorrect value
+dsf4434
+2023-03-29 20:38:56 DEBUG InputIntegerValidator:31 - For input string: "dsf4434"
+28291 [main] DEBUG InputIntegerValidator  - For input string: "dsf4434"
+
+The entered value is not an integer (e.g., -256, 0, 128, and so on).
+Enter an Integer value:
+8
+
+Please, input the character of the arithmetic operation.
+Possible characters:
+- for addition, type '+';
+- for subtraction, type '-';
+- for multiplication, type '*';
+- for division, type '/'.
+Input a character:
+
+//Here we entered incorrect value
++_!@#
+2023-03-29 20:39:34 INFO  InputCharacterValidator:69 - The entered character isn't an arithmetic operation.
+66519 [main] INFO InputCharacterValidator  - The entered character isn't an arithmetic operation.
+
+Possible characters:
+- for addition, type '+';
+- for subtraction, type '-';
+- for multiplication, type '*';
+- for division, type '/'.
+Enter one from the possible character:
++
+
+***Result of arithmetic operation***
+First operand (3) + second operand (8) = 11
+
+Do you want to produce next operation?
+Type "Yes" for continue:
+no
+
+Thank you for choosing best calculator ever!
+☺
+
+Process finished with exit code 0

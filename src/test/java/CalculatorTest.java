@@ -9,6 +9,7 @@ import java.math.BigInteger;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CalculatorTest {
     private static final Logger logger = LogManager.getLogger(CalculatorTest.class);
 
@@ -29,7 +30,9 @@ public class CalculatorTest {
     public void produceAddingOfNumbersTest(int firstParameter, int secondParameter, long expected) {
         long actual = new Calculator().produceAddingOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
+        logger.info("Test passed successfully");
     }
+
     static Stream<Arguments> provideArgumentsProduceSubtractionOfNumbers() {
         return Stream.of(
                 Arguments.of(100, 1, 99),
@@ -48,7 +51,7 @@ public class CalculatorTest {
     public void produceSubtractionOfNumbersTest(int firstParameter, int secondParameter, int expected) {
         int actual = new Calculator().produceSubtractionOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
-        logger.debug("Passed");
+        logger.info("Test passed successfully");
     }
 
     static Stream<Arguments> provideArgumentsProduceMultiplicationOfNumbers() {
@@ -69,6 +72,7 @@ public class CalculatorTest {
     public void produceMultiplicationOfNumbersTest(int firstParameter, int secondParameter, BigInteger expected) {
         BigInteger actual = new Calculator().produceMultiplicationOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual);
+        logger.info("Test passed successfully");
     }
 
     static Stream<Arguments> provideArgumentsProduceDivisionOfNumbers() {
@@ -88,5 +92,6 @@ public class CalculatorTest {
     public void produceDivisionOfNumbersTest(int firstParameter, int secondParameter, double expected) {
         double actual = new Calculator().produceDivisionOfNumbers(firstParameter, secondParameter);
         assertEquals(expected, actual, 0.01);
+        logger.info("Test passed successfully");
     }
 }
